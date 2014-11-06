@@ -14,8 +14,8 @@ test:
   encoding: utf8
 production:
   adapter: mysql2
-  database: onebody
-  host: localhost
-  username: onebody
-  password: onebody
-  encoding: utf8
+  database: "<%=ENV['OPENSHIFT_APP_NAME']%>"
+  username: "<%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>"
+  password: "<%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>"
+  host:     <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  port:     <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
